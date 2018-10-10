@@ -1,0 +1,9 @@
+{
+  "servers": [
+    {
+      "name": "test",
+      "address": "localhost",
+      "port": 3333
+    }
+  ]
+}
