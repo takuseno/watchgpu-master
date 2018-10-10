@@ -2,13 +2,17 @@ import requests
 import json
 
 from flask import Flask
+from flask import Blueprint
 from config import Config
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./front/build', static_url_path='/public')
+assets = Blueprint('static', __name__, static_url_path='/static',
+                   static_folder='./front/build/static')
+app.register_blueprint(assets)
 config = Config()
 base_url = 'http://'
 
-@app.route('/')
+@app.route('/usages')
 def index():
     results = {}
     for server in config.get_servers():
