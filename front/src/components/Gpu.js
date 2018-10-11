@@ -6,7 +6,7 @@ const Gpu = ({ gpu }) => (
   <div className='gpu'>
     <Detail
       gpu_name={gpu.product_name}
-      memory_usage={gpu.memory_usage}
+      memory={gpu.memory}
       utilization={gpu.utilization}>
     </Detail>
     <ProcessList

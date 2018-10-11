@@ -11,19 +11,19 @@ const Process = ({ pid, name, memory }) => (
 const ProcessList = ({ processes }) => (
   <div className='processes'>
     <table className='process-table'>
-      <theader>
+      <thead>
         <tr>
           <th>pid</th>
           <th>name</th>
           <th>memory</th>
         </tr>
-      </theader>
+      </thead>
       <tbody>
         {processes.map(process =>
           <Process
             pid={process.pid}
-            name={process.name}
-            memory={process.memory}>
+            name={process.process_name}
+            memory={process.used_memory}>
           </Process>
         )}
       </tbody>

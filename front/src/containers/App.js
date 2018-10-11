@@ -17,10 +17,11 @@ class App extends Component {
     return (
       <div className="App">
         {server_names.map(server_name => 
-          {servers[server_name].map(gpu => {
-            console.log(gpu)
-            return (<Gpu gpu={gpu}/>)
-          })}
+          <div>
+            {servers[server_name].map(gpu => {
+              return (<Gpu gpu={gpu}/>)
+            })}
+          </div>
         )}
       </div>
     )
