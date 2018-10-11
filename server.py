@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from jinja2 import FileSystemLoader
 from config import Config
 
@@ -23,7 +23,7 @@ def get_usages():
         response = requests.get(base_url + address + ':' + str(port))
         data = json.loads(response.text)
         results[server['name']] = data
-    return json.dumps(results)
+    return jsonify(results)
 
 @app.route('/')
 def index():
