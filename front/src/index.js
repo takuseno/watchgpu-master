@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './containers/App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import App from './containers/App'
+import * as serviceWorker from './serviceWorker'
 import reducers from './reducers'
 import api from './middlewares'
 import thunk from 'redux-thunk'

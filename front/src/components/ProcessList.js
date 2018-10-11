@@ -10,7 +10,7 @@ const Process = ({ pid, name, memory }) => (
 
 const ProcessList = ({ processes }) => (
   <div className='processes'>
-    <table className='process-table'>
+    <table className='process-table table table-bordered table-striped'>
       <thead>
         <tr>
           <th>pid</th>
