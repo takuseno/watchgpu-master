@@ -5,7 +5,7 @@ import ProcessList from './ProcessList'
 const Gpu = ({ gpu }) => (
   <div className='gpu'>
     <Detail
-      gpu_name={gpu.product_name}
+      gpu_name={gpu.name}
       memory={gpu.memory}
       utilization={gpu.utilization}>
     </Detail>

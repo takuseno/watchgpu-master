@@ -18,6 +18,7 @@ class App extends Component {
       <div className="App">
         {server_names.map(server_name => 
           <div>
+            <h3>{server_name}</h3>
             {servers[server_name].map(gpu => {
               return (<Gpu gpu={gpu}/>)
             })}
